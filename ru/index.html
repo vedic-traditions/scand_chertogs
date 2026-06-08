@@ -46,8 +46,7 @@
             overflow-y: auto;
         }
 
-        body::before {
-            content: "";
+        .bg-container {
             position: fixed;
             top: 0;
             left: 0;
@@ -56,7 +55,7 @@
             background: url('chertogs/Iggdrassil.webp?v=1.1') no-repeat center center;
             background-size: cover;
             z-index: -1;
-            will-change: transform;
+            pointer-events: none;
         }
 
         /* Common button styles */
@@ -687,6 +686,7 @@
     </style>
 </head>
 <body>
+    <div class="bg-container"></div>
     <button class="mute-btn" id="muteBtn">🔊 Звук включен</button>
 
     <div class="container">
